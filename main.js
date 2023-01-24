@@ -22,6 +22,8 @@
   console.log(html);
   /* Now target and insert that html. Injecting it into your browser. */
 
+  console.log(data.results[0].Images[0].url_75x75);
+
   document
     .getElementById("loadCardsHere")
     .insertAdjacentHTML("afterbegin", html);

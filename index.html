@@ -79,22 +79,26 @@
 
     <script id="etsy-item-template" type="text/x-handlebars-template">
       {{#each results}}
-        <div class="col-lg-4">
-          <div class="card-column card m-2" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="https://i.etsystatic.com/16482167/r/il/160fee/2960458243/il_fullxfull.2960458243_p29w.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body m-3">
-              <h5 class="card-title">{{title}}</h5>
-              <p class="card-text">
-                {{description}}
-              </p>
-              <a href="#" class="btn btn-primary rounded-pill">＋ Add to cart</a>
+        {{#each Images}}
+          <div class="col-lg-4">
+            <div class="card-column card m-2" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src={{url_75x75}}
+                alt="Card image cap"
+              />
+              {{/each}}
+              <div class="card-body m-3">
+                <h5 class="card-title">{{title}}</h5>
+                <p class="card-text">
+                  {{description}}
+                </p>
+                <p>Price: {{price}}</p>
+                <a href="#" class="btn btn-primary rounded-pill">＋ Add to cart</a>
+              </div>
             </div>
           </div>
-        </div>
+
       {{/each}}
     </script>
 
