@@ -78,15 +78,18 @@
     <div id="loadCardsHere" class="row"></div>
 
     <script id="etsy-item-template" type="text/x-handlebars-template">
+
       {{#each results}}
         {{#each Images}}
+        {{#if @first}}
           <div class="col-lg-4">
             <div class="card-column card m-2" style="width: 18rem">
               <img
                 class="card-img-top"
-                src={{url_75x75}}
+                src={{url_570xN}}
                 alt="Card image cap"
               />
+              {{/if}}
               {{/each}}
               <div class="card-body m-3">
                 <h5 class="card-title">{{title}}</h5>
