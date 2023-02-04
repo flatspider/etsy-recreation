@@ -27,4 +27,20 @@
   document
     .getElementById("loadCardsHere")
     .insertAdjacentHTML("afterbegin", html);
+
+  const shortenTitle = document.querySelectorAll(".card-title");
+
+  for (let i = 0; i < shortenTitle.length; i++) {
+    console.log(shortenTitle[i].innerHTML);
+    shortenTitle[i].innerHTML =
+      shortenTitle[i].innerHTML.substring(0, 20) + "...";
+  }
+
+  const shortenInfo = document.querySelectorAll(".card-text");
+
+  for (let i = 0; i < shortenInfo.length; i++) {
+    console.log(shortenInfo[i].innerHTML);
+    shortenInfo[i].innerHTML =
+      shortenInfo[i].innerHTML.substring(0, 150) + "...";
+  }
 })();
