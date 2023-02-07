@@ -3,10 +3,6 @@
 
   /* Reach into the document and get the element by the template ID */
 
-  console.log(data);
-
-  console.log(data.results);
-
   /* The source is used as the template. Outline the setup of the etsy picture, info, etc. */
   const source = document.getElementById("etsy-item-template").innerHTML;
 
@@ -19,10 +15,7 @@
 
   const html = template(context);
 
-  console.log(html);
   /* Now target and insert that html. Injecting it into your browser. */
-
-  console.log(data.results[0].Images[0].url_75x75);
 
   document
     .getElementById("loadCardsHere")
@@ -31,16 +24,7 @@
   const shortenTitle = document.querySelectorAll(".card-title");
 
   for (let i = 0; i < shortenTitle.length; i++) {
-    console.log(shortenTitle[i].innerHTML);
     shortenTitle[i].innerHTML =
       shortenTitle[i].innerHTML.substring(0, 20) + "...";
-  }
-
-  const shortenInfo = document.querySelectorAll(".card-text");
-
-  for (let i = 0; i < shortenInfo.length; i++) {
-    console.log(shortenInfo[i].innerHTML);
-    shortenInfo[i].innerHTML =
-      shortenInfo[i].innerHTML.substring(0, 150) + "...";
   }
 })();

@@ -22,7 +22,7 @@
       {{#each results}}
         {{#each Images}}
         {{#if @first}}
-          <div class="col-lg-4">
+          <div class="col-lg-3 full-card">
             <div class="card-column card m-2" style="width: 18rem">
               <img
                 class="card-img-top"
@@ -33,9 +33,10 @@
               {{/each}}
               <div class="card-body m-3">
                 <h5 class="card-title">{{title}}</h5>
+                <!--
                 <p class="card-text">
                   {{description}}
-                </p>
+                </p>-->
                 <p>Price: ${{price}}</p>
                 <a href="#" class="btn btn-primary rounded-pill">＋ Add to cart</a>
               </div>
